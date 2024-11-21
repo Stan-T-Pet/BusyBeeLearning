@@ -8,26 +8,26 @@
     <EditText
         android:id="@+id/usernameField"
         android:layout_width="match_parent"
-        android:layout_height="102dp"
+        android:layout_height="wrap_content"
         android:hint="Username"
         android:inputType="text" />
 
     <EditText
         android:id="@+id/passwordField"
         android:layout_width="match_parent"
-        android:layout_height="118dp"
+        android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
-        android:layout_height="124dp"
+        android:layout_height="wrap_content"
         android:text="Login" />
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="378dp"
-        android:layout_height="91dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Register" />
 </LinearLayout>

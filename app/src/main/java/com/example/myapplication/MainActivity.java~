@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         Button registerButton = findViewById(R.id.registerButton);
 
         // Set click listener for login button
+
+        MongoHelper mongoHelper = new MongoHelper();
+
         loginButton.setOnClickListener(view -> {
             String username = usernameField.getText().toString();
             String password = passwordField.getText().toString();
