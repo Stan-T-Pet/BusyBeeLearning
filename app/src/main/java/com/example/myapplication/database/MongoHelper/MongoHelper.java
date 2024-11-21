@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.busybee.database.MongoHelper;
 
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoClient;
