@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:id="@+id/main">
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/usernameField"
@@ -14,17 +13,25 @@
         android:inputType="text" />
 
     <EditText
+        android:id="@+id/emailField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
         android:id="@+id/passwordField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/loginButton"
+    <EditText
+        android:id="@+id/confirmPasswordField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:hint="Confirm Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/registerButton"
