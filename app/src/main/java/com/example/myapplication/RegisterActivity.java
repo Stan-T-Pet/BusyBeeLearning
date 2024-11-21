@@ -16,7 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         // Initialize MongoHelper
-        MongoHelper mongoHelper = new MongoHelper();
+        com.example.myapplication.MongoHelper mongoHelper = new com.example.myapplication.MongoHelper();
 
         // Initialize UI elements
         EditText usernameField = findViewById(R.id.usernameField);

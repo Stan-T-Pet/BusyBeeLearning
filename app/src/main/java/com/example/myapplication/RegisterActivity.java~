@@ -16,7 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         // Initialize MongoHelper
-        MongoHelper mongoHelper = new MongoHelper();
+        com.example.myapplication.MongoHelper mongoHelper = new MongoHelper();
 
         // Initialize UI elements
         EditText usernameField = findViewById(R.id.usernameField);
@@ -37,13 +37,17 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
             if (!password.equals(confirmPassword)) {
-                Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Passwords do not match.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Example: Perform registration logic here (replace with actual API/DB operation)
-            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
-            finish(); // Close the registration screen
+            boolean success = mongoHelper.registerUser(username, email, password);
+            if (success) {
+                Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
+                finish();
+            } else {
+                Toast.makeText(this, "Username already exists.", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
